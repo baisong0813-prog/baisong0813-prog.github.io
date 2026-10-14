@@ -56,7 +56,7 @@ function ProjectCard({
         aria-label={`查看${project.title}项目详情`}
       >
         <div
-          className={`relative overflow-hidden ${project.coverFit === "contain" ? "bg-[#e8f6fa]" : "bg-foreground/5"} ${index === 0 ? "aspect-[1.9] sm:aspect-[2.5]" : "aspect-[1.5]"}`}
+          className={`relative overflow-hidden ${project.slug === "yuanfang" ? "bg-[#1d2d3d]" : project.coverFit === "contain" ? "bg-[#e8f6fa]" : "bg-foreground/5"} ${index === 0 ? "aspect-[1.9] sm:aspect-[2.5]" : "aspect-[1.5]"}`}
         >
           <Image
             src={project.cover}
@@ -67,7 +67,7 @@ function ProjectCard({
             priority={index === 0}
           />
           <span className="absolute left-5 top-5 rounded-full bg-background/90 px-3 py-1.5 text-xs font-semibold tracking-[0.12em] text-foreground shadow-sm backdrop-blur-sm">
-            {project.number} / 03
+            {project.number} / {String(projects.length).padStart(2, "0")}
           </span>
         </div>
         <div className="flex flex-1 flex-col gap-3 px-6 py-6 sm:px-8 sm:py-8">

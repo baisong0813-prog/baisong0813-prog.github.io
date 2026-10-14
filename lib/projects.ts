@@ -16,6 +16,7 @@ export type PortfolioProject = {
   approach: string;
   cover: string;
   coverFit?: "contain" | "cover";
+  coverHeight?: number;
   accent: string;
   sections: ProjectSection[];
 };
@@ -78,6 +79,27 @@ export const projects: PortfolioProject[] = [
       { title: "核心页面优化", note: "调整信息层级和高频操作路径。", image: "/projects/pms/04.webp", width: 1920, height: 6285 },
       { title: "交互规范沉淀", note: "把局部优化延伸为可复用的界面规则。", image: "/projects/pms/05.webp", width: 1920, height: 6966 },
       { title: "细节与状态设计", note: "补足复杂业务场景下的操作反馈。", image: "/projects/pms/06.webp", width: 1920, height: 7202 },
+    ],
+  },
+  {
+    slug: "yuanfang",
+    number: "04",
+    title: "百度地图 · 元芳",
+    eyebrow: "出行决策 · 交互设计",
+    summary: "升级路线规划中的智能出行决策卡片，让沿途信息更易识别、比较与使用。",
+    challenge: "随着服务接入增多，元芳卡片出现空间利用率低、信息识别度弱和二级页面衔接不顺畅等问题。",
+    approach: "先梳理卡片现状与业务目标，再统一卡片间距和交互规则，针对路线、天气、沿途服务等内容采用差异化呈现。",
+    cover: "/projects/yuanfang/01.webp",
+    coverFit: "contain",
+    coverHeight: 1125,
+    accent: "#3f86e8",
+    sections: [
+      { title: "项目背景", note: "明确元芳在路线规划页中的定位与现有框架。", image: "/projects/yuanfang/02.webp", width: 1920, height: 3175 },
+      { title: "现状与目标", note: "从空间、识别和链路问题出发，定义体验升级方向。", image: "/projects/yuanfang/03.webp", width: 1920, height: 8990 },
+      { title: "定义设计规范", note: "统一卡片间距、容器高度与跨页面操作位置。", image: "/projects/yuanfang/04.webp", width: 1920, height: 6590 },
+      { title: "强化决策元素", note: "让景区、酒店、路线对比及天气等信息更便于判断。", image: "/projects/yuanfang/05.webp", width: 1920, height: 14890 },
+      { title: "细节质感打磨", note: "完善路线切换、天气感知与新手攻略等细节。", image: "/projects/yuanfang/06.webp", width: 1920, height: 4360 },
+      { title: "效果总览", note: "展示长短途场景与卡片体系的最终设计效果。", image: "/projects/yuanfang/07.webp", width: 1920, height: 4980 },
     ],
   },
 ];

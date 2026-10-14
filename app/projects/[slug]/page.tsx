@@ -43,7 +43,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               ← 返回项目列表
             </Link>
             <span className="font-mono text-xs tracking-[0.18em] text-foreground/45">
-              CASE {project.number} / 03
+              CASE {project.number} / {String(projects.length).padStart(2, "0")}
             </span>
           </div>
 
@@ -70,7 +70,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             src={project.cover}
             alt={`${project.title}作品集封面`}
             width={1920}
-            height={slug === "xingguanjia" ? 1458 : 1074}
+            height={project.coverHeight ?? (slug === "xingguanjia" ? 1458 : 1074)}
             sizes="(min-width: 1320px) 1240px, 100vw"
             priority
             className="h-auto w-full"

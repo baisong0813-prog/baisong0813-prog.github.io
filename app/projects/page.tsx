@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = createMetadata({
   title: "项目",
-  description: "星管家、百达屋星球法宝与 PMS 系统优化三个体验设计项目。",
+  description: "星管家、百达屋星球法宝、PMS 系统优化与百度地图元芳四个体验设计项目。",
   path: "/projects",
 });
 
@@ -20,7 +20,7 @@ export default function ProjectsPage(): ReactNode {
             项目作品
           </h1>
           <p className="max-w-[46ch] text-[17px] leading-[1.7] text-foreground/65 sm:text-[19px]">
-            从住客侧 AI 服务、会员权益到酒店后台系统，展示我对复杂服务体验的不同切入方式。
+            从住客侧 AI 服务、会员权益、酒店后台系统到地图出行决策，展示我对复杂体验问题的不同切入方式。
           </p>
         </FadeIn>
       </section>

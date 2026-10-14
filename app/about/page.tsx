@@ -41,7 +41,7 @@ export default function AboutPage() {
             让复杂体验更清晰。
           </h1>
           <p className="mt-7 max-w-[44ch] text-[18px] leading-[1.8] text-foreground/65 sm:text-[21px]">
-            我是李百凇，一名 UX 设计师。这个作品集收录了酒店 AI 服务、会员权益与后台系统三个项目，记录我如何从产品问题走向具体的交互方案。
+            我是李百凇，一名 UX 设计师。这个作品集收录了酒店 AI 服务、会员权益、后台系统与地图出行决策四个项目，记录我如何从产品问题走向具体的交互方案。
           </p>
         </FadeIn>
 
