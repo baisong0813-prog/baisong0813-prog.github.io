@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { FadeIn } from "@/components/ui/motion-primitives";
-import { getProject, projects } from "@/lib/projects";
+import { getProject, publishedProjects } from "@/lib/projects";
 import { createMetadata } from "@/lib/metadata";
 
 type PageProps = {
@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return publishedProjects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -31,8 +31,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   const project = getProject(slug);
   if (!project) notFound();
 
-  const index = projects.findIndex((item) => item.slug === slug);
-  const nextProject = projects[(index + 1) % projects.length] ?? project;
+  const index = publishedProjects.findIndex((item) => item.slug === slug);
+  const nextProject = publishedProjects[(index + 1) % publishedProjects.length] ?? project;
 
   return (
     <main id="main-content" className="min-h-screen">
@@ -43,7 +43,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               ← 返回项目列表
             </Link>
             <span className="font-mono text-xs tracking-[0.18em] text-foreground/45">
-              CASE {project.number} / {String(projects.length).padStart(2, "0")}
+              CASE {project.number} / {String(publishedProjects.length).padStart(2, "0")}
             </span>
           </div>
 

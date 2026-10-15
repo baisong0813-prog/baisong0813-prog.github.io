@@ -8,6 +8,7 @@ export type ProjectSection = {
 
 export type PortfolioProject = {
   slug: string;
+  published?: boolean;
   number: string;
   title: string;
   eyebrow: string;
@@ -83,6 +84,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "yuanfang",
+    published: false,
     number: "04",
     title: "百度地图 · 元芳",
     eyebrow: "出行决策 · 交互设计",
@@ -104,6 +106,8 @@ export const projects: PortfolioProject[] = [
   },
 ];
 
+export const publishedProjects = projects.filter((project) => project.published !== false);
+
 export function getProject(slug: string): PortfolioProject | undefined {
-  return projects.find((project) => project.slug === slug);
+  return publishedProjects.find((project) => project.slug === slug);
 }

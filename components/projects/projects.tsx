@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { FadeIn } from "@/components/ui/motion-primitives";
-import { projects, type PortfolioProject } from "@/lib/projects";
+import { publishedProjects, type PortfolioProject } from "@/lib/projects";
 
 export type ProjectsProps = {
   withHeadline?: boolean;
@@ -29,7 +29,7 @@ export function Projects({ withHeadline = false }: ProjectsProps): ReactNode {
         )}
 
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
-          {projects.map((project, index) => (
+          {publishedProjects.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
@@ -67,7 +67,7 @@ function ProjectCard({
             priority={index === 0}
           />
           <span className="absolute left-5 top-5 rounded-full bg-background/90 px-3 py-1.5 text-xs font-semibold tracking-[0.12em] text-foreground shadow-sm backdrop-blur-sm">
-            {project.number} / {String(projects.length).padStart(2, "0")}
+            {project.number} / {String(publishedProjects.length).padStart(2, "0")}
           </span>
         </div>
         <div className="flex flex-1 flex-col gap-3 px-6 py-6 sm:px-8 sm:py-8">
