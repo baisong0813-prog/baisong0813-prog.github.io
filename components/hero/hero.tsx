@@ -18,10 +18,12 @@ export function Hero(): ReactNode {
               <br />
               <span className="text-[var(--accent)]">找到体验的秩序</span>
             </h1>
-            <p className="mt-7 max-w-[34ch] text-[17px] leading-[1.8] tracking-tight text-foreground/65 sm:text-[19px]">
+            <p className="mt-7 text-[17px] leading-[1.8] tracking-tight text-foreground/65 sm:text-[19px]">
               我是李百凇，一名 UX设计师。
               <br />
-              擅长梳理复杂业务，建立从产品逻辑到界面呈现的一致体验。
+              <span className="xl:whitespace-nowrap">
+                擅长梳理复杂业务，建立从产品逻辑到界面呈现的一致体验。
+              </span>
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
